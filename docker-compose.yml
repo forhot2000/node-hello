@@ -1,4 +1,4 @@
 web:
-  build: .
+  image: forhot2000/node-hello
   ports:
-  - 3000
+    - 3000
