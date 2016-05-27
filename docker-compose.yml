@@ -1,4 +1,11 @@
 web:
   image: forhot2000/node-hello
+
+lb:
   ports:
-    - 3000
+  - 10080:3000
+  labels:
+    io.rancher.scheduler.global: 'true'
+  image: rancher/load-balancer-service
+  links:
+  - web:web
