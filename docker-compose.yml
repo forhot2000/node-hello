@@ -1,5 +1,5 @@
 web:
-  image: forhot2000/node-hello
+  image: registry.cn-shenzhen.aliyuncs.com/forhot2000/node-hello
 
 lb:
   ports:
