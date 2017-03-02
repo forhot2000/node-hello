@@ -3,9 +3,9 @@ var app = express();
 
 app.get('/', function (req, res) {
   res.send([
-    '<h1>Hello World!<h1>', 
-    '<p><i>DOCKER_IMAGE: ', os.environ['DOCKER_IMAGE'], '</i></p>',
-    '<p><i>ENVIRONMENT: ', os.environ['ENVIRONMENT'], '</i></p>'
+    '<h1>Hello World!</h1>', 
+    '<p><i>DOCKER_IMAGE: ', process.env.DOCKER_IMAGE, '</i></p>',
+    '<p><i>ENVIRONMENT: ', process.env.ENVIRONMENT, '</i></p>'
   ].join('\n'));
 });
 
