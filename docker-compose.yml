@@ -1,11 +1,13 @@
 web:
-  image: registry.cn-shenzhen.aliyuncs.com/forhot2000/node-hello
+  image: ${DOCKER_IMAGE}
+  environment:
+    - ENVIRONMENT
 
 lb:
   ports:
-  - 10080:3000
+    - 10080:3000
   labels:
     io.rancher.scheduler.global: 'true'
   image: rancher/load-balancer-service
   links:
-  - web:web
+    - web:web
