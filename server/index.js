@@ -3,7 +3,7 @@ var app = express();
 
 app.get('/', function (req, res) {
   res.send([
-    '<h1>Hello World!</h1>\n', 
+    '<h1>Hello World again!</h1>\n', 
     '<p><i>DOCKER_IMAGE: ', process.env.DOCKER_IMAGE, '</i></p>\n',
     '<p><i>ENVIRONMENT: ', process.env.ENVIRONMENT, '</i></p>\n'
   ].join(''));
